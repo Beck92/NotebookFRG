@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Status:</strong>
+  <%= @mission.Status %>
+</p>
+
+<p>
+  <strong>Challenge:</strong>
+  <%= @mission.Challenge %>
+</p>
+
+<p>
+  <strong>Bloknot:</strong>
+  <%= @mission.Bloknot_id %>
+</p>
+
+<%= link_to 'Edit', edit_mission_path(@mission) %> |
+<%= link_to 'Back', missions_path %>

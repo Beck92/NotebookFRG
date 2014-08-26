@@ -1,0 +1,2 @@
+module BloknotsHelper
+end

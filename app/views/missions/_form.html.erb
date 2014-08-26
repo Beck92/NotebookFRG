@@ -1,0 +1,30 @@
+<%= form_for(@mission) do |f| %>
+  <% if @mission.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@mission.errors.count, "error") %> prohibited this mission from being saved:</h2>
+
+      <ul>
+      <% @mission.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= f.label :Status %><br>
+    <%= f.check_box :Status %>
+  </div>
+  <div class="field">
+    <%= f.label :Challenge %><br>
+    <%= f.text_field :Challenge %>
+  </div>
+  <div class="field">
+    <%= f.label :Bloknot_id %><br>
+    <%= f.select :Bloknot_id, options_from_collection_for_select(Bloknot.all, "id", "NameOfBkoknot",@mission.Bloknot_id), :include_blank => true, :class => 'form-control' %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+
+<% end %>

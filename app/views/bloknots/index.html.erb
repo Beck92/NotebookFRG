@@ -1,0 +1,35 @@
+<h1>Listing bloknots</h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nameofbkoknot</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @bloknots.each do |bloknot| %>
+      <tr>
+        <td><%= bloknot.NameOfBkoknot %></td>
+        <td><%= link_to 'Show', bloknot %></td>
+        <td><%= link_to 'Edit', edit_bloknot_path(bloknot) %></td>
+        <td><%= link_to 'Destroy', bloknot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+      <tr class="span8">
+        <td>
+          <% if bloknot.missions.any? %>
+            <p>Missions (<%= bloknot.missions.count %>)</p>
+            <ol class="missions">
+              <%= render bloknot.missions %>
+            </ol>
+          <% end %>
+        </td>
+      </tr> 
+    <% end %>
+  </tbody>
+
+</table>
+
+<br>
+
+<%= link_to 'New Bloknot', new_bloknot_path %>
