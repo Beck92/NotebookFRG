@@ -1,6 +1,6 @@
 <h1>Listing missions</h1>
 
-<table>
+<table class="table table-bordered">
   <thead>
     <tr>
       <th>Status</th>
@@ -16,9 +16,9 @@
         <td><%= mission.Status %></td>
         <td><%= mission.Challenge %></td>
         <td><%= mission.Bloknot_id %></td>
-        <td><%= link_to 'Show', mission %></td>
-        <td><%= link_to 'Edit', edit_mission_path(mission) %></td>
-        <td><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button type="button" class="btn btn-warning"><%= link_to 'Show', mission %></button></td>
+        <td><button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_mission_path(mission) %></button></td>
+        <td><button type="button" class="btn btn-warning"><%= link_to 'Destroy', mission, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -26,4 +26,6 @@
 
 <br>
 
-<%= link_to 'New Mission', new_mission_path %>
+<button type="button" class="btn btn-success"><%= link_to 'New Mission', new_mission_path %></button>
+
+<button type="button" class="btn btn-success"><%= link_to 'Listing Bloknot', bloknots_path %></button>

@@ -1,5 +1,5 @@
 <h1>Listing bloknots</h1>
-<table class="table">
+<table class="table table-striped">
   <thead>
     <tr>
       <th>Nameofbkoknot</th>
@@ -11,9 +11,9 @@
     <% @bloknots.each do |bloknot| %>
       <tr>
         <td><%= bloknot.NameOfBkoknot %></td>
-        <td><%= link_to 'Show', bloknot %></td>
-        <td><%= link_to 'Edit', edit_bloknot_path(bloknot) %></td>
-        <td><%= link_to 'Destroy', bloknot, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button type="button" class="btn btn-warning"><%= link_to 'Show', bloknot %></button></td>
+        <td><button type="button" class="btn btn-warning"><%= link_to 'Edit', edit_bloknot_path(bloknot) %></button></td>
+        <td><button type="button" class="btn btn-warning"><%= link_to 'Destroy', bloknot, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
       <tr class="span8">
         <td>
@@ -32,4 +32,8 @@
 
 <br>
 
-<%= link_to 'New Bloknot', new_bloknot_path %>
+<button type="button" class="btn btn-success"><%= link_to 'New Bloknot', new_bloknot_path %></button>
+
+<button type="button" class="btn btn-success"><%= link_to 'New Missions', new_mission_path %></button>
+
+<button type="button" class="btn btn-success"><%= link_to 'Listing Missions', missions_path %></button>
