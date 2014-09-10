@@ -2,8 +2,8 @@ Rails.application.routes.draw do
   resources :missions
 
   resources :bloknots
-  
-  root to: "blonkots#index"
+
+  root to: "bloknots#index"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
