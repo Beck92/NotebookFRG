@@ -20,8 +20,8 @@
     <%= f.text_field :Challenge %>
   </div>
   <div class="field">
-    <%= f.label :Bloknot_id %><br>
-    <%= f.select :Bloknot_id, options_from_collection_for_select(Bloknot.all, "id", "NameOfBkoknot",@mission.Bloknot_id), :include_blank => true, :class => 'form-control' %>
+    <%= f.label :bloknot_id %><br>
+    <%= f.select :bloknot_id, options_from_collection_for_select(Bloknot.all, "id", "NameOfBkoknot",@mission.bloknot_id), :include_blank => true, :class => 'form-control' %>
   </div>
   <div class="actions">
     <%= f.submit %>
